@@ -38,6 +38,7 @@
   padding: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  
   list-style-type: none;
+  border: black;
   border-color: black;
 }
 
