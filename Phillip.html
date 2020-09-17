@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="mystyle2.css">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original title</title>
+
+    <script>
+        function setColor(btn, color) {
+            var count = 1;
+            var property = document.getElementById(btn);
+            if (count == 0) {
+                property.style.backgroundColor = "#FFFFFF"
+                count = 1;
+            }
+            else {
+                property.style.backgroundColor = "#7FFF00"
+                count = 0;
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <a href="index2.html" class="logo">
+            <img class="div-img" src="bildeavmeg.png" alt="Italian Trulli">
+        </a>
+
+        <div class="rightfloat">
+            <a class="active" href="index2.html">Home</a>
+            <a href="kontakt.html">Kontakt</a>
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/alexbrul"
+                data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large"
+                aria-label="Follow @alexbrul on GitHub">Follow @alexbrul</a>
+            <a href="https://github.com/alexbrul">Github</a>
+
+        </div>
+
+    </div>
+
+
+
+    <article class="center">
+        <h2> Trykk på tjeneste du ønsker! Grønn knapp betyr "ja", og rød betyr "nei":</h2>
+
+        <ul class="ultest" id="list">
+            <li class="active2">
+                <p>Jeg vil gå på tur </p>
+         
+            </li>
+            <li class="active2">
+                    <p>Jeg vil ha besøk</p>
+            </li>
+            <li class="active2">
+                <p>Jeg vil dra på Cafe</p>
+            </li>
+            <li class="active2">
+                <p>Jeg vil spise middag med noen</p>
+            </li>
+            <li class="active2">
+                <p>Jeg trenger hjelp med daglige gjøremål</p>
+            </li>
+            <li class="active2">
+                <p>Jeg trenger hjelp med andre ting! Ring meg.</p>
+            </li>
+        </ul>
+    </article>
+
+    <p>This is a paragraph.</p>
+
+    <script>
+
+        var ul = document.getElementById("list");
+
+        var listItems = ul.getElementsByTagName("li");
+        console.log(listItems)
+        for (li of listItems) {
+            li.addEventListener('click', function () {
+                if (this.classList.contains('active')) {
+                    this.classList.remove("active");
+                    this.classList.add("active2");
+                } else {
+                    this.classList.remove("active2");
+                    this.classList.add("active");
+                }
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>
